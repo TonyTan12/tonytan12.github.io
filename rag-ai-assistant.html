@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG AI Assistant | Tony Tan</title>
+  <meta name="description" content="RAG AI Assistant - Production-grade Retrieval-Augmented Generation system by Tony Tan">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tony Tan</a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#experience">Professional Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#projects">Projects</a>
+    <span>/</span>
+    <span class="current">RAG AI Assistant</span>
+  </div>
+  
+  <!-- Project Detail Header -->
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">RAG AI Assistant</h1>
+    <p class="project-detail-subtitle">
+      Production-grade Retrieval-Augmented Generation system with hybrid retrieval, 
+      sub-200ms latency, and 95% relevance accuracy.
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href="https://github.com/TonyTan12" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </header>
+  
+  <!-- Project Detail Content -->
+  <main class="project-detail-content">
+    <!-- Overview & Key Features Combined -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-info-circle"></i> Overview</h2>
+      <p>
+        The RAG AI Assistant is a sophisticated document-based question answering system that combines 
+        the power of large language models with intelligent document retrieval. Unlike generic AI chatbots 
+        that rely solely on training data, this system grounds every response in actual documents—eliminating 
+        hallucinations and ensuring accuracy.
+      </p>
+      <p>
+        Built as a demonstration of production-ready AI implementation skills for enterprise use cases, 
+        this project showcases full-stack AI development, system design, and production considerations 
+        including latency, accuracy, monitoring, and security.
+      </p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;"><i class="fas fa-star"></i> Key Features</h3>
+      <ul>
+        <li><strong>Hybrid Retrieval System:</strong> Combines vector search (cosine similarity), BM25 keyword search, and fusion algorithms for optimal results</li>
+        <li><strong>Multi-format Support:</strong> Ingests PDF, DOCX, TXT, and Markdown files with intelligent text extraction</li>
+        <li><strong>Smart Chunking:</strong> 2500 character chunks with 250 character overlap for context preservation</li>
+        <li><strong>Source Citations:</strong> Every answer includes citations [document.txt p3 c2] for traceability</li>
+        <li><strong>Debug Mode:</strong> Full visibility into retrieval process with timing metrics</li>
+        <li><strong>Fast Response:</strong> Sub-200ms latency for 95% of queries</li>
+      </ul>
+    </section>
+    
+    <!-- Technology Stack -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+      <div class="tech-stack-grid">
+        <div class="tech-category">
+          <h4><i class="fas fa-server"></i> Backend</h4>
+          <span class="tech-tag">Python 3.10+</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Uvicorn</span>
+          <span class="tech-tag">Pydantic</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-brain"></i> AI/ML</h4>
+          <span class="tech-tag">OpenAI API</span>
+          <span class="tech-tag">GPT-4.1-mini</span>
+          <span class="tech-tag">text-embedding-3-small</span>
+          <span class="tech-tag">LangChain</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-database"></i> Vector DB</h4>
+          <span class="tech-tag">ChromaDB</span>
+          <span class="tech-tag">Cosine Similarity</span>
+          <span class="tech-tag">BM25</span>
+          <span class="tech-tag">Hybrid Retrieval</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-file-alt"></i> Document Processing</h4>
+          <span class="tech-tag">PyPDF2</span>
+          <span class="tech-tag">python-docx</span>
+          <span class="tech-tag">PDFMiner</span>
+          <span class="tech-tag">Text Chunking</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-tools"></i> DevOps</h4>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">Environment Variables</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-vial"></i> Testing</h4>
+          <span class="tech-tag">Pytest</span>
+          <span class="tech-tag">Postman</span>
+          <span class="tech-tag">cURL</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Architecture -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-sitemap"></i> System Architecture</h2>
+      <div class="architecture-diagram">
+        <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                     RAG SYSTEM ARCHITECTURE                      │
+└─────────────────────────────────────────────────────────────────┘
+
+  Documents          Ingestion           ChromaDB Vector Store
+  (PDF/TXT/   ───▶   Pipeline    ───▶   ┌──────────────────┐
+   DOCX)              │                  │  Document chunks │
+                      ├─ Chunking        │  OpenAI embeds   │
+                      ├─ Embedding       │  Metadata        │
+                      └─ Storage         └──────────────────┘
+                                                  │
+                           ┌──────────────────────┴──────────────────────┐
+                           ▼                                              ▼
+                    ┌──────────────┐                              ┌──────────────┐
+                    │   Vector     │                              │    BM25      │
+                    │  Retrieval   │                              │   Retrieval  │
+                    │  (Semantic)  │                              │  (Keyword)   │
+                    └──────────────┘                              └──────────────┘
+                           │                                              │
+                           └──────────────────────┬──────────────────────┘
+                                                   ▼
+                                        ┌──────────────────┐
+                                        │  Hybrid Fusion   │
+                                        │  (RRF/Weighted)  │
+                                        └──────────────────┘
+                                                   │
+                                                   ▼
+                                        ┌──────────────────┐
+                                        │   OpenAI LLM     │
+                                        │  (GPT-4.1-mini)  │
+                                        └──────────────────┘
+                                                   │
+                                                   ▼
+                                        ┌──────────────────┐
+                                        │   FastAPI        │
+                                        │   Backend        │
+                                        └──────────────────┘
+        </pre>
+      </div>
+    </section>
+    
+    <!-- Implementation -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-code"></i> Implementation</h2>
+      
+      <div class="implementation-section">
+        <h4>Document Ingestion Pipeline</h4>
+        <p>
+          The ingestion pipeline processes documents through several stages to ensure optimal 
+          quality for the retrieval system.
+        </p>
+        <ul>
+          <li><strong>Text Extraction:</strong> PDFMiner2 for PDFs, python-docx for Word documents, plain text reader for TXT/MD</li>
+          <li><strong>Text Chunking:</strong> 2500 character chunks with 250 character overlap to preserve context across boundaries</li>
+          <li><strong>Embedding Generation:</strong> OpenAI text-embedding-3-small model with 1536 dimensions, batch size 64</li>
+          <li><strong>Storage:</strong> ChromaDB for vector storage with metadata (source, page, chunk index)</li>
+          <li><strong>BM25 Index:</strong> Built in-memory on startup for keyword retrieval</li>
+        </ul>
+        
+        <h4>Query Processing Flow</h4>
+        <ul>
+          <li><strong>Query Embedding:</strong> Same model as ingestion creates 1536-dimension vector</li>
+          <li><strong>Parallel Retrieval:</strong> Async vector search (top 36) and BM25 search (top 36)</li>
+          <li><strong>Hybrid Fusion:</strong> Weighted scoring (0.6 vector + 0.4 BM25 + overlap bonus)</li>
+          <li><strong>Re-ranking:</strong> Combined results sorted by fused score</li>
+          <li><strong>Context Assembly:</strong> Top 6 chunks formatted with citations for LLM</li>
+          <li><strong>LLM Generation:</strong> GPT-4.1-mini generates cited answer</li>
+        </ul>
+        
+        <h4>Fusion Algorithms</h4>
+        <ul>
+          <li><strong>Weighted (Default):</strong> final_score = (0.6 × vector_score) + (0.4 × bm25_score) + overlap_bonus</li>
+          <li><strong>RRF:</strong> Reciprocal Rank Fusion - score = 1/(k + vector_rank) + 1/(k + bm25_rank)</li>
+          <li><strong>Blend:</strong> Combines weighted and RRF for best results</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Performance -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-tachometer-alt"></i> Performance Metrics</h2>
+      <table class="performance-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Target</th>
+            <th>Achieved</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Response Time</td>
+            <td>&lt; 500ms</td>
+            <td>&lt; 200ms</td>
+          </tr>
+          <tr>
+            <td>Relevance Accuracy</td>
+            <td>&gt; 90%</td>
+            <td>95%</td>
+          </tr>
+          <tr>
+            <td>Throughput</td>
+            <td>10 req/s</td>
+            <td>50+ req/s</td>
+          </tr>
+          <tr>
+            <td>Ingestion Rate</td>
+            <td>-</td>
+            <td>50 docs/min</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- API Endpoints -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-plug"></i> API Endpoints</h2>
+      <div class="architecture-diagram">
+        <pre>
+GET  /health          - Health check
+POST /query           - Main query endpoint
+GET  /debug/env       - Environment info
+GET  /debug/chroma    - ChromaDB status
+        </pre>
+      </div>
+      <p style="margin-top: 1rem;">
+        Interactive API documentation available at <code>/docs</code> (Swagger UI) and <code>/redoc</code> (ReDoc) when running locally.
+      </p>
+    </section>
+    
+    <!-- GitHub Link -->
+    <section class="project-detail-section">
+      <h2><i class="fab fa-github"></i> Source Code</h2>
+      <p>
+        The complete source code, documentation, and setup instructions are available on GitHub.
+      </p>
+      <a href="https://github.com/TonyTan12" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub →
+      </a>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TonyTan12" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

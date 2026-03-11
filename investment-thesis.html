@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Thesis | Tony Tan</title>
+  <meta name="description" content="Tony Tan's Investment Thesis - AI Infrastructure Analysis">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tony Tan</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>/</span><span class="current">Investment Thesis</span>
+  </div>
+  
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">Investment Thesis</h1>
+    <p class="project-detail-subtitle">AI Infrastructure Analysis & Market Outlook</p>
+  </header>
+  
+  <main class="project-detail-content">
+    <section class="project-detail-section">
+      <h2><i class="fas fa-brain"></i> AI's Next Bottlenecks Are Memory and Optical Networking</h2>
+      <p style="font-style: italic; color: var(--text-muted); margin-bottom: 1.5rem;">By Tony Tan | January 31, 2026</p>
+      
+      <p>The AI boom is widely framed as a GPU story, but the real constraint in scaling intelligence is increasingly shifting to memory bandwidth and cluster networking. Modern AI systems are not single chips but distributed machines made up of thousands of accelerators working in parallel. NVIDIA CEO Jensen Huang has repeatedly emphasized this shift, noting that "the data center is the new unit of computing." In other words, performance is no longer determined by a single chip, but by how efficiently the entire system—compute, memory, and networking—operates together.</p>
+      
+      <p>Memory sits at the core of this system. AI accelerators rely on high-bandwidth memory (HBM) to feed the massive tensor operations required for training and inference. If the memory subsystem cannot supply data quickly enough, the GPU stalls waiting for inputs. This is why the industry is describing the current cycle as an HBM-driven memory supercycle, with demand accelerating alongside AI deployments. As model sizes grow and context windows expand, the amount of memory bandwidth required per accelerator continues to increase, making memory one of the most durable bottlenecks in AI infrastructure.</p>
+      
+      <p>But feeding compute is only half the problem. Once thousands of GPUs are working together, the system must synchronize results across the entire cluster. This creates enormous east-west traffic inside data centers. Optical networking becomes essential here because electrical signaling becomes inefficient at very high speeds and distances. Companies building optical interconnects are already seeing this demand ramp. As the CEO of Applied Optoelectronics explained on a recent earnings call, "forecast demand for 800G modules are projected to exceed our production capacity through mid-2027."</p>
+      
+      <p>Viewed together, the pattern is clear: AI infrastructure evolves by pushing bottlenecks outward from the chip. The constraint first appeared in GPU compute, then advanced packaging, then high-bandwidth memory, and now increasingly networking bandwidth. Memory ensures each accelerator can operate efficiently, while optical networking ensures thousands of accelerators can operate together as a single system. As AI clusters scale from thousands to tens of thousands of GPUs, the demand for faster memory and higher-bandwidth optical interconnects is likely to remain one of the most structurally durable themes in the AI infrastructure stack.</p>
+    </section>
+    
+    <section class="project-detail-section">
+      <h2><i class="fas fa-chart-line"></i> Bullish Positions</h2>
+      <p><strong>I am bullish on the following positions as of January 31, 2026:</strong></p>
+      <div class="tech-stack-grid" style="margin-top: 1rem;">
+        <div class="tech-category">
+          <h4><i class="fas fa-memory"></i> Memory</h4>
+          <span class="tech-tag">SanDisk</span>
+          <span class="tech-tag">Micron (MU)</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-network-wired"></i> Optical Networking</h4>
+          <span class="tech-tag">Applied Optoelectronics (AAOI)</span>
+          <span class="tech-tag">Lumentum (LITE)</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-microchip"></i> Semiconductors</h4>
+          <span class="tech-tag">AXT Inc (AXTI)</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="project-detail-section">
+      <h2><i class="fas fa-link"></i> Sources</h2>
+      <ul style="line-height: 2;">
+        <li><a href="https://www.rev.com/transcripts/nvidia-gtc-2021-keynote-event-with-ceo-jensen-huang-transcript-april-12" target="_blank" style="color: var(--accent-color);">NVIDIA CEO Jensen Huang on AI Infrastructure</a></li>
+        <li><a href="https://www.fabricatedknowledge.com/p/the-data-center-is-the-new-compute" target="_blank" style="color: var(--accent-color);">The Data Center is the New Compute Unit</a></li>
+        <li><a href="https://www.fool.com/earnings/call-transcripts/2026/02/26/applied-optoelectronics-aaoi-earnings-call/" target="_blank" style="color: var(--accent-color);">Applied Optoelectronics Earnings Call Transcript</a></li>
+        <li><a href="https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/" target="_blank" style="color: var(--accent-color);">SK Hynix: HBM-Led Memory Supercycle</a></li>
+      </ul>
+    </section>
+    
+    <section class="project-detail-section" style="text-align: center; padding: 2rem; background: var(--bg-secondary); border-radius: var(--radius);">
+      <p style="font-size: 1.1rem; font-style: italic; color: var(--text-secondary);">"The data center is the new unit of computing."</p>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">— Jensen Huang, NVIDIA CEO</p>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/TonyTan12" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony Tan | Tax Technology & Transformation</title>
+  <meta name="description" content="Tony Tan - Tax Technology & Transformation at Ernst & Young. Specializing in tax process optimization and technical application development.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Tony Tan</a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="#analyzer"><img src="ai-icon.jpg" alt="AI" style="width: 22px; height: 22px; border-radius: 50%; margin-right: 0.3rem; vertical-align: middle;"> Job Fit</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="headshot.jpg" alt="Tony Tan">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Tony Tan</h1>
+        <p class="hero-subtitle">Tax Technology & Transformation at Ernst & Young — Products</p>
+        <p class="hero-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        <p class="hero-tagline">
+          Tax Technology & Transformation at Ernst & Young based in the New York office. 
+          Specialize in optimizing tax processes for clients and developing and implementing 
+          tax technical applications that align with their tax and business needs. Graduate 
+          of Baruch College's Zicklin School of Business with a Bachelor of Business Administration 
+          in Accounting and a Master of Science in Business Analytics.
+        </p>
+        <div class="hero-buttons">
+          <a href="mailto:Tonytan1999aol@gmail.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Get in Touch
+          </a>
+          <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" class="btn btn-outline">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/TonyTan12" target="_blank" class="btn btn-outline">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="Tony_Tan_Resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section class="section section-alt" id="experience">
+    <div class="section-header">
+      <span style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Career</span>
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700;">Professional Experience</h2>
+    </div>
+    
+    <div class="experience-container">
+      <div class="timeline">
+        <!-- Senior Role -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Senior – Tax Technology & Transformation (Application Design & Development)</h3>
+              <p class="timeline-company">Ernst & Young U.S. LLP</p>
+              <p class="timeline-dates">July 2025 – Present</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li><strong>TPDS (Transfer Pricing Documentation Solution):</strong> Served as lead requirements owner for EY's global Transfer Pricing Documentation Solution, translating complex OECD international tax reporting standards into technical user stories and functional specifications for a 35-person engineering organization across Application, Platform, and AI pods. Coordinated cross-team development of an enterprise reporting platform automating the generation of OECD-compliant Master and Local Files for EY's global transfer pricing practice.</li>
+              <li><strong>Analyzer – Global Payroll Mobility Platform:</strong> Led end-to-end development of a global shadow payroll platform for a major professional services client, translating a 150-page business requirements document into a comprehensive product roadmap and technical system design. Designed core UI/UX architecture through wireframes and interactive mockups in Miro to guide engineering development and improve usability. Developed a Business Rule Testing (BRT) framework to validate payroll integrity and detect reporting gaps such as bonus payout discrepancies across managing director and non-MD employee groups. Directed a cross-functional squad through triage and resolution of 150+ production bugs while ensuring TTAR and InfoSec compliance prior to deployment.</li>
+              <li><strong>Pulse – Engagement Economics Analytics Platform:</strong> Act as Product Owner for an internal Power BI engagement economics platform, enabling partners and account leads to monitor real-time engagement performance and high-volume billing codes across the firm. Streamlined reporting workflows and operational visibility, saving hundreds of hours annually for managers and senior leadership.</li>
+              <li><strong>Pillar Two (Global Minimum Tax) Data Automation:</strong> Developed a Python-based ETL pipeline (Pandas, NumPy) packaged within Alteryx to automate ingestion and transformation of highly unstructured financial datasets for a global asset manager's portfolio companies. Built dictionary-based mapping logic and case-insensitive matching algorithms to normalize financial inputs across 120+ jurisdictions for Pillar Two reporting. Implemented automated validation logs and data sanitation checks, reducing manual processing effort by 80%+ while improving reporting accuracy and audit confidence.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Staff Role -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Staff – Tax Technology & Transformation (Application Design & Development)</h3>
+              <p class="timeline-company">Ernst & Young U.S. LLP</p>
+              <p class="timeline-dates">January 2023 – July 2025</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Supported agile product development using Microsoft DevOps, leading sprint planning, backlog refinement, and user story development to ensure timely delivery of platform enhancements.</li>
+              <li>Facilitated daily stand-ups and cross-functional collaboration between developers, QA, and business analysts to remove delivery blockers and maintain sprint velocity.</li>
+              <li>Partnered with stakeholders and engagement teams to gather requirements, define acceptance criteria, and translate tax business needs into actionable development tasks.</li>
+              <li>Contributed to product roadmap development through market research, client surveys, and story point estimation to prioritize high-value features.</li>
+              <li>Managed production environment operations, user onboarding, and post-release support while integrating bug resolutions into sprint cycles to minimize downtime.</li>
+              <li>Utilized SQL queries and stored procedure analysis to diagnose application issues and resolve discrepancies between database outputs and XML reporting files.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Intern Role -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Intern, Tax Technology</h3>
+              <p class="timeline-company">Ernst & Young U.S. LLP</p>
+              <p class="timeline-dates">June 2022 - Aug 2022</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Executed DEV and UAT testing for tax technology platforms</li>
+              <li>Logged and documented bugs with detailed reproduction steps</li>
+              <li>Participated in daily stand-ups and requirement gathering sessions</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- OnePlus -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Finance Intern</h3>
+              <p class="timeline-company">OnePlus USA Corp</p>
+              <p class="timeline-dates">April 2021 - July 2021</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Processed payment request approvals and budget expense reporting</li>
+              <li>Managed expense reimbursement processing workflows</li>
+              <li>Performed credit card reconciliation and financial analysis</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Smith & Company -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Tax Intern</h3>
+              <p class="timeline-company">Stephen M. Smith & Company LLC</p>
+              <p class="timeline-dates">Jan 2020 - March 2020</p>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Prepared sales tax and depreciation schedules for clients</li>
+              <li>Organized and maintained tax document repositories</li>
+              <li>Assisted with payroll and state tax filing processes</li>
+              <li>Reviewed cap tables for 750+ partner entities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Expertise</span>
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700;">Skills</h2>
+      <p class="section-subtitle">Technologies and methodologies I work with</p>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skills-grid">
+        <!-- Methodologies -->
+        <div class="skill-card skill-card-methodologies">
+          <div class="skill-header">
+            <div class="skill-icon-wrapper">
+              <i class="fas fa-project-diagram skill-icon"></i>
+            </div>
+            <h3 class="skill-title">Methodologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Agile</span>
+            <span class="skill-tag">Scrum</span>
+            <span class="skill-tag">Kanban</span>
+            <span class="skill-tag">Product Management</span>
+            <span class="skill-tag">Backlog Management</span>
+            <span class="skill-tag">User Stories</span>
+            <span class="skill-tag">Sprint Planning</span>
+          </div>
+        </div>
+        
+        <!-- Data & Analytics -->
+        <div class="skill-card skill-card-data">
+          <div class="skill-header">
+            <div class="skill-icon-wrapper">
+              <i class="fas fa-chart-line skill-icon"></i>
+            </div>
+            <h3 class="skill-title">Data & Analytics</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Alteryx</span>
+            <span class="skill-tag">Data Modeling</span>
+            <span class="skill-tag">ETL Processes</span>
+          </div>
+        </div>
+        
+        <!-- Development -->
+        <div class="skill-card skill-card-dev">
+          <div class="skill-header">
+            <div class="skill-icon-wrapper">
+              <i class="fas fa-code skill-icon"></i>
+            </div>
+            <h3 class="skill-title">Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+        
+        <!-- Cloud & Tools -->
+        <div class="skill-card skill-card-cloud">
+          <div class="skill-header">
+            <div class="skill-icon-wrapper">
+              <i class="fas fa-cloud skill-icon"></i>
+            </div>
+            <h3 class="skill-title">Cloud & Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft Azure</span>
+            <span class="skill-tag">Azure Data Factory</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Notion</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Confluence</span>
+          </div>
+        </div>
+        
+        <!-- AI & RAG -->
+        <div class="skill-card skill-card-ai">
+          <div class="skill-header">
+            <div class="skill-icon-wrapper">
+              <i class="fas fa-robot skill-icon"></i>
+            </div>
+            <h3 class="skill-title">AI & RAG</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Vector Databases</span>
+            <span class="skill-tag">ChromaDB</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Embeddings</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">OCR</span>
+            <span class="skill-tag">Document Processing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section class="section section-alt" id="projects">
+    <div class="section-header">
+      <span style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Portfolio</span>
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700;">Projects</h2>
+      <p class="section-subtitle">Featured technical projects and implementations</p>
+    </div>
+    
+    <div class="projects-container">
+      <div class="projects-grid">
+        <!-- RAG AI Assistant -->
+        <div class="project-card">
+          <div class="project-image project-image-rag" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 100%);">
+            <i class="fas fa-robot" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">RAG AI Assistant</h3>
+            <p class="project-subtitle">Production-grade Retrieval-Augmented Generation system</p>
+            <p class="project-description">
+              A sophisticated AI assistant leveraging retrieval-augmented generation to deliver 
+              accurate, context-aware responses with sub-200ms latency and 95% relevance accuracy. 
+              The system combines vector search with BM25 keyword retrieval for optimal results.
+            </p>
+            <div class="tech-stack-inline">
+              <div class="tech-stack-label"><i class="fas fa-layer-group"></i> Technology Stack</div>
+              <div class="tech-stack-tags">
+                <span class="tech-tag-inline">Python</span>
+                <span class="tech-tag-inline">FastAPI</span>
+                <span class="tech-tag-inline">ChromaDB</span>
+                <span class="tech-tag-inline">OpenAI</span>
+                <span class="tech-tag-inline">Docker</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="rag-ai-assistant.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-eye"></i> View Details
+              </a>
+              <a href="https://github.com/TonyTan12/rag-ai-assistant" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Document Intelligence -->
+        <div class="project-card">
+          <div class="project-image project-image-doc" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 100%);">
+            <i class="fas fa-file-alt" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Document Intelligence Pipeline</h3>
+            <p class="project-subtitle">Automated document processing and extraction system</p>
+            <p class="project-description">
+              An intelligent document processing pipeline that extracts, classifies, and structures 
+              data from various document formats using OCR and NLP techniques. Achieves 95%+ OCR 
+              accuracy with automated entity extraction and document classification.
+            </p>
+            <div class="tech-stack-inline">
+              <div class="tech-stack-label"><i class="fas fa-layer-group"></i> Technology Stack</div>
+              <div class="tech-stack-tags">
+                <span class="tech-tag-inline">Python</span>
+                <span class="tech-tag-inline">OCR</span>
+                <span class="tech-tag-inline">NLP</span>
+                <span class="tech-tag-inline">spaCy</span>
+                <span class="tech-tag-inline">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="document-intelligence.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-eye"></i> View Details
+              </a>
+              <a href="https://github.com/TonyTan12/document-intelligence-pipeline" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Activities Section -->
+  <section class="section" id="activities">
+    <div class="section-header">
+      <span style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Interests</span>
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700;">Activities</h2>
+    </div>
+    
+    <div class="activities-container">
+      <div class="activities-grid">
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="activity-title">Investing</h3>
+        </div>
+        
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3 class="activity-title">Piano</h3>
+        </div>
+        
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3 class="activity-title">Traveling</h3>
+        </div>
+        
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fas fa-bicycle"></i>
+          </div>
+          <h3 class="activity-title">Biking</h3>
+        </div>
+        
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fas fa-hiking"></i>
+          </div>
+          <h3 class="activity-title">Hiking</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- AI Job Fit Section -->
+  <section class="section section-alt" id="analyzer">
+    <div class="section-header">
+      <h2 class="section-title"><img src="ai-icon.jpg" alt="AI" style="width: 40px; height: 40px; margin-right: 0.5rem; vertical-align: middle; border-radius: 50%;">Job Fit Analyzer</h2>
+      <p class="section-subtitle">See how my skills match your job requirements</p>
+    </div>
+    
+    <div class="analyzer-container">
+      <div class="analyzer-box">
+        
+        <div class="analyzer-description">
+          <p>
+            This AI-powered tool analyzes job descriptions against my experience in tax technology, 
+            product management, and data analytics. Simply paste a job description below, and the 
+            analyzer will match required skills and qualifications with my professional background, 
+            providing a match score and detailed breakdown.
+          </p>
+        </div>
+        
+        <div class="analyzer-input-area">
+          <textarea 
+            class="analyzer-textarea" 
+            id="job-input" 
+            placeholder="Paste job description here...
+
+Example:
+We're looking for a Product Manager with:
+- 3+ years of Agile/Scrum experience
+- Power BI or Tableau proficiency
+- SQL and Python skills
+- Cross-functional team leadership"
+          ></textarea>
+        </div>
+        
+        <button class="analyze-btn" id="analyze-btn">
+          <i class="fas fa-robot"></i> Analyze Job Fit
+        </button>
+        
+        <div class="analyzer-result" id="analyzer-result"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TonyTan12" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

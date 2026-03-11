@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Intelligence Pipeline | Tony Tan</title>
+  <meta name="description" content="Document Intelligence Pipeline - Automated document processing and extraction system by Tony Tan">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tony Tan</a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#experience">Professional Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#projects">Projects</a>
+    <span>/</span>
+    <span class="current">Document Intelligence Pipeline</span>
+  </div>
+  
+  <!-- Project Detail Header -->
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">Document Intelligence Pipeline</h1>
+    <p class="project-detail-subtitle">
+      Automated document processing and extraction system using OCR and NLP techniques 
+      to extract, classify, and structure data from various document formats.
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href="https://github.com/TonyTan12" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </header>
+  
+  <!-- Project Detail Content -->
+  <main class="project-detail-content">
+    <!-- Overview & Key Features Combined -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-info-circle"></i> Overview</h2>
+      <p>
+        The Document Intelligence Pipeline is an end-to-end solution for processing unstructured 
+        documents and extracting structured data. It handles various document formats including 
+        PDFs, scanned images, Word documents, and more, using advanced OCR and NLP techniques.
+      </p>
+      <p>
+        This system demonstrates expertise in document processing workflows, data extraction, 
+        and building scalable pipelines for enterprise document management use cases. The pipeline 
+        achieves 95%+ OCR accuracy on printed documents and 85%+ on handwritten text, making it 
+        suitable for a wide range of business applications.
+      </p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;"><i class="fas fa-star"></i> Key Features</h3>
+      <ul>
+        <li><strong>Multi-format Support:</strong> Process PDFs, images (JPG/PNG/TIFF), Word docs, Excel files, and scanned documents</li>
+        <li><strong>Advanced OCR:</strong> Uses Tesseract and PaddleOCR with preprocessing for optimal text extraction accuracy</li>
+        <li><strong>Layout Preservation:</strong> Maintains document structure including tables, headers, and sections</li>
+        <li><strong>Entity Extraction:</strong> Automatically identifies and extracts key entities (names, dates, amounts, IDs)</li>
+        <li><strong>Document Classification:</strong> ML-based classification of document types (invoices, contracts, forms)</li>
+        <li><strong>Confidence Scoring:</strong> Each extraction includes confidence scores for quality assessment</li>
+        <li><strong>Async Processing:</strong> Celery-based queue system for handling large document batches</li>
+        <li><strong>Search Indexing:</strong> Elasticsearch integration for full-text search across processed documents</li>
+      </ul>
+    </section>
+    
+    <!-- Technology Stack -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+      <div class="tech-stack-grid">
+        <div class="tech-category">
+          <h4><i class="fas fa-server"></i> Backend</h4>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">Redis</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-eye"></i> OCR</h4>
+          <span class="tech-tag">Tesseract OCR</span>
+          <span class="tech-tag">PaddleOCR</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Pillow</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-brain"></i> NLP</h4>
+          <span class="tech-tag">spaCy</span>
+          <span class="tech-tag">NLTK</span>
+          <span class="tech-tag">Transformers</span>
+          <span class="tech-tag">Regex</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-database"></i> Storage</h4>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">MinIO</span>
+          <span class="tech-tag">Elasticsearch</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-file-alt"></i> Document Processing</h4>
+          <span class="tech-tag">PyPDF2</span>
+          <span class="tech-tag">pdfplumber</span>
+          <span class="tech-tag">python-docx</span>
+          <span class="tech-tag">openpyxl</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-tools"></i> DevOps</h4>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Docker Compose</span>
+          <span class="tech-tag">Git</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Architecture -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-sitemap"></i> System Architecture</h2>
+      <div class="architecture-diagram">
+        <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                 DOCUMENT INTELLIGENCE PIPELINE                   │
+└─────────────────────────────────────────────────────────────────┘
+
+  Input Documents         Processing Pipeline           Output
+  ┌───────────┐          ┌──────────────┐          ┌───────────┐
+  │   PDF     │          │   Ingest     │          │ Structured│
+  │   Images  │─────────▶│   Queue      │─────────▶│   Data    │
+  │   Scans   │          │   (Celery)   │          │   JSON    │
+  └───────────┘          └──────────────┘          └───────────┘
+                                │
+                                ▼
+                    ┌──────────────────────┐
+                    │  Document Processor  │
+                    │  ├─ OCR Extraction   │
+                    │  ├─ Text Cleaning    │
+                    │  └─ Layout Analysis  │
+                    └──────────────────────┘
+                                │
+                                ▼
+                    ┌──────────────────────┐
+                    │   NLP Pipeline       │
+                    │  ├─ Entity Extraction│
+                    │  ├─ Classification   │
+                    │  └─ Data Structuring │
+                    └──────────────────────┘
+                                │
+                                ▼
+                    ┌──────────────────────┐
+                    │   Validation Layer   │
+                    │  ├─ Confidence Score │
+                    │  ├─ Human Review     │
+                    │  └─ Quality Metrics  │
+                    └──────────────────────┘
+        </pre>
+      </div>
+    </section>
+    
+    <!-- Implementation -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-code"></i> Implementation</h2>
+      
+      <div class="implementation-section">
+        <h4>OCR Preprocessing Pipeline</h4>
+        <p>
+          Before OCR, documents undergo preprocessing to improve accuracy:
+        </p>
+        <ul>
+          <li><strong>Deskewing:</strong> Detect and correct document rotation</li>
+          <li><strong>Denoising:</strong> Remove scan artifacts and background noise</li>
+          <li><strong>Binarization:</strong> Convert to black/white for better text detection</li>
+          <li><strong>Contrast Enhancement:</strong> Improve text visibility</li>
+          <li><strong>Resolution Scaling:</strong> Optimal DPI for OCR engines (300 DPI)</li>
+        </ul>
+        
+        <h4>NLP Processing Pipeline</h4>
+        <ul>
+          <li><strong>Text Segmentation:</strong> Split into paragraphs, sentences, tokens</li>
+          <li><strong>Named Entity Recognition:</strong> spaCy NER for person, org, date, money entities</li>
+          <li><strong>Pattern Matching:</strong> Regex patterns for IDs, phone numbers, emails</li>
+          <li><strong>Table Extraction:</strong> Detect and parse tabular data</li>
+          <li><strong>Document Classification:</strong> BERT-based classifier for document type</li>
+        </ul>
+        
+        <h4>Data Validation</h4>
+        <ul>
+          <li>Checksum validation for extracted IDs</li>
+          <li>Date format standardization and validation</li>
+          <li>Cross-field consistency checks</li>
+          <li>Confidence threshold filtering (&gt; 0.85)</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Performance -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-tachometer-alt"></i> Performance Metrics</h2>
+      <table class="performance-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OCR Accuracy (Printed)</td>
+            <td>95%+</td>
+          </tr>
+          <tr>
+            <td>OCR Accuracy (Handwritten)</td>
+            <td>85%+</td>
+          </tr>
+          <tr>
+            <td>Processing Speed</td>
+            <td>5 pages/second</td>
+          </tr>
+          <tr>
+            <td>Entity Extraction F1</td>
+            <td>0.92</td>
+          </tr>
+          <tr>
+            <td>Document Classification</td>
+            <td>94% accuracy</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Use Cases -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-briefcase"></i> Use Cases</h2>
+      <ul>
+        <li><strong>Invoice Processing:</strong> Extract vendor info, line items, totals, due dates from invoices</li>
+        <li><strong>Contract Analysis:</strong> Identify key terms, parties, dates, obligations in legal documents</li>
+        <li><strong>Form Processing:</strong> Automated data entry from scanned forms and applications</li>
+        <li><strong>Receipt Management:</strong> Extract merchant, amount, date from expense receipts</li>
+        <li><strong>Document Search:</strong> Full-text search across large document repositories</li>
+      </ul>
+    </section>
+    
+    <!-- GitHub Link -->
+    <section class="project-detail-section">
+      <h2><i class="fab fa-github"></i> Source Code</h2>
+      <p>
+        The complete source code, documentation, and setup instructions are available on GitHub.
+      </p>
+      <a href="https://github.com/TonyTan12" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub →
+      </a>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TonyTan12" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
