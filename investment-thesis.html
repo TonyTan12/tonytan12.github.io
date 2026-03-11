@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T041DTFRMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T041DTFRMN');
+  </script>
 </head>
 <body>
   <div class="loading-screen" id="loading-screen">
@@ -30,7 +38,7 @@
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#activities">Activities</a></li>
         <li><a href="investment-thesis.html">Investment Thesis</a></li>
-        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+        <li><a href="index.html#analyzer"><img src="ai-icon.jpg" alt="AI" style="width: 22px; height: 22px; border-radius: 50%; margin-right: 0.3rem; vertical-align: middle;"> Job Fit</a></li>
       </ul>
       <div class="nav-controls">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></button>
@@ -45,7 +53,7 @@
   
   <header class="project-detail-header">
     <h1 class="project-detail-title">Investment Thesis</h1>
-    <p class="project-detail-subtitle">AI Infrastructure Analysis & Market Outlook</p>
+    <p class="project-detail-subtitle">My perspective on markets, opportunities, and investment strategies.</p>
   </header>
   
   <main class="project-detail-content">
@@ -53,13 +61,39 @@
       <h2><i class="fas fa-brain"></i> AI's Next Bottlenecks Are Memory and Optical Networking</h2>
       <p style="font-style: italic; color: var(--text-muted); margin-bottom: 1.5rem;">By Tony Tan | January 31, 2026</p>
       
-      <p>The AI boom is widely framed as a GPU story, but the real constraint in scaling intelligence is increasingly shifting to memory bandwidth and cluster networking. Modern AI systems are not single chips but distributed machines made up of thousands of accelerators working in parallel. NVIDIA CEO Jensen Huang has repeatedly emphasized this shift, noting that "the data center is the new unit of computing." In other words, performance is no longer determined by a single chip, but by how efficiently the entire system—compute, memory, and networking—operates together.</p>
+      <p>The AI boom is often described as a GPU story, but the real constraint in scaling intelligence is starting to shift toward memory bandwidth and cluster networking. Modern AI systems are no longer single chips running isolated workloads. They are distributed machines made up of thousands of accelerators working together. NVIDIA CEO Jensen Huang has pointed this out directly, saying "the data center is the new unit of computing." In other words, performance is no longer determined by the speed of a single chip, but by how efficiently the entire system, compute, memory, and networking, operates together.</p>
       
-      <p>Memory sits at the core of this system. AI accelerators rely on high-bandwidth memory (HBM) to feed the massive tensor operations required for training and inference. If the memory subsystem cannot supply data quickly enough, the GPU stalls waiting for inputs. This is why the industry is describing the current cycle as an HBM-driven memory supercycle, with demand accelerating alongside AI deployments. As model sizes grow and context windows expand, the amount of memory bandwidth required per accelerator continues to increase, making memory one of the most durable bottlenecks in AI infrastructure.</p>
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fas fa-memory"></i> Memory: The Center of the System</h3>
       
-      <p>But feeding compute is only half the problem. Once thousands of GPUs are working together, the system must synchronize results across the entire cluster. This creates enormous east-west traffic inside data centers. Optical networking becomes essential here because electrical signaling becomes inefficient at very high speeds and distances. Companies building optical interconnects are already seeing this demand ramp. As the CEO of Applied Optoelectronics explained on a recent earnings call, "forecast demand for 800G modules are projected to exceed our production capacity through mid-2027."</p>
+      <p>Memory sits at the center of this system. AI accelerators rely on high-bandwidth memory (HBM) to feed the enormous number of tensor operations required during training and inference. If the memory subsystem cannot deliver data quickly enough, the GPU waits for inputs, leaving expensive compute idle. This is why many people in the semiconductor industry are now talking about an HBM-driven memory cycle, where every new generation of accelerator requires significantly more memory bandwidth and capacity.</p>
       
-      <p>Viewed together, the pattern is clear: AI infrastructure evolves by pushing bottlenecks outward from the chip. The constraint first appeared in GPU compute, then advanced packaging, then high-bandwidth memory, and now increasingly networking bandwidth. Memory ensures each accelerator can operate efficiently, while optical networking ensures thousands of accelerators can operate together as a single system. As AI clusters scale from thousands to tens of thousands of GPUs, the demand for faster memory and higher-bandwidth optical interconnects is likely to remain one of the most structurally durable themes in the AI infrastructure stack.</p>
+      <p>As models grow larger and context windows expand, the amount of data that needs to sit close to the GPU continues to increase. In practice, this makes memory one of the most durable bottlenecks in the AI stack.</p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fas fa-network-wired"></i> The Networking Challenge</h3>
+      
+      <p>Feeding the GPU is only part of the challenge. Once thousands of GPUs are working together, they constantly exchange gradients, activations, and parameters across the cluster. This creates massive east-west traffic inside data centers. AI clusters behave more like distributed supercomputers than traditional cloud infrastructure. If the network cannot keep up, GPUs spend time waiting for synchronization instead of computing.</p>
+      
+      <p>As the CEO of Applied Optoelectronics noted on an earnings call, "forecast demand for 800G modules are projected to exceed our production capacity through mid-2027." That comment highlights how quickly networking bandwidth requirements are increasing.</p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fas fa-lightbulb"></i> Why Optical Networking Becomes Critical</h3>
+      
+      <p>This is where optical networking becomes critical. For very short distances, such as GPUs connected within a server or rack, copper cables are still widely used because they are simple and inexpensive. As clusters expand beyond a single rack, copper begins to reach limits in power consumption and signal integrity. Electrical signaling becomes inefficient at the speeds required for modern AI fabrics.</p>
+      
+      <p>That is why the industry is moving from 400G to 800G optical links and eventually to 1.6T and beyond, using light to move data across racks and entire clusters. Over time optics will likely take over more of the networking stack as bandwidth demands continue to grow.</p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fas fa-chart-line"></i> The Architectural Pattern</h3>
+      
+      <p>When viewed at the system level, the pattern becomes clear. AI infrastructure evolves by pushing bottlenecks outward from the chip. The constraint first appeared in GPU compute, then advanced packaging, then high-bandwidth memory, and now increasingly networking bandwidth.</p>
+      
+      <p>At the architectural level there are two communication layers:</p>
+      <ul>
+        <li><strong>Scale-up networking:</strong> Connects GPUs closely within a node or rack</li>
+        <li><strong>Scale-out networking:</strong> Connects thousands of GPUs across a data center</li>
+      </ul>
+      
+      <p>Copper still works well for the shortest scale-up connections, but optical networking dominates scale-out fabrics and will continue expanding as clusters grow. Memory allows each accelerator to run efficiently, while optical networking allows thousands of accelerators to operate together as one machine.</p>
+      
+      <p>As AI clusters grow from thousands to tens of thousands, and eventually much larger, both layers will remain central to the future of AI infrastructure.</p>
     </section>
     
     <section class="project-detail-section">
