@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG AI Assistant | Tony Tan</title>
+  <title>RAG | Tony Tan</title>
   <meta name="description" content="RAG AI Assistant - Production-grade Retrieval-Augmented Generation system by Tony Tan">
   
   <!-- Fonts -->
@@ -65,18 +65,18 @@
     <span>/</span>
     <a href="index.html#projects">Projects</a>
     <span>/</span>
-    <span class="current">RAG AI Assistant</span>
+    <span class="current">RAG</span>
   </div>
   
   <!-- Project Detail Header -->
   <header class="project-detail-header">
-    <h1 class="project-detail-title">RAG AI Assistant</h1>
+    <h1 class="project-detail-title">RAG</h1>
     <p class="project-detail-subtitle">
       Production-grade Retrieval-Augmented Generation system with hybrid retrieval, 
       sub-200ms latency, and 95% relevance accuracy.
     </p>
     <div style="margin-top: 1.5rem;">
-      <a href="https://github.com/TonyTan12" target="_blank" class="btn btn-outline">
+      <a href="https://github.com/TonyTan12/rag-ai-assistant" target="_blank" class="btn btn-outline">
         <i class="fab fa-github"></i> View on GitHub
       </a>
     </div>
@@ -108,6 +108,56 @@
         <li><strong>Debug Mode:</strong> Full visibility into retrieval process with timing metrics</li>
         <li><strong>Fast Response:</strong> Sub-200ms latency for 95% of queries</li>
       </ul>
+    </section>
+    
+    <!-- What Makes It Different -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-bolt"></i> What Makes It Different from ChatGPT & Gemini</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border-color);">
+            <th style="text-align: left; padding: 0.75rem; color: var(--text-primary);">Feature</th>
+            <th style="text-align: left; padding: 0.75rem; color: var(--text-primary);">This RAG System</th>
+            <th style="text-align: left; padding: 0.75rem; color: var(--text-primary);">ChatGPT / Gemini</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Data Source</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Your private documents</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">Public training data only</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Hallucinations</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Eliminated - answers grounded in docs</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">Can invent information</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Source Citations</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Every answer shows exact source</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">No source tracking</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Privacy</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Documents stay local/controlled</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">Data sent to external servers</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Customization</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Tailored to your specific docs</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">One-size-fits-all model</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; color: var(--text-secondary);"><strong>Cost</strong></td>
+            <td style="padding: 0.75rem; color: var(--accent-primary);">Pay per use, no subscription</td>
+            <td style="padding: 0.75rem; color: var(--text-secondary);">Monthly subscription</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 1.5rem; color: var(--text-secondary);">
+        <strong>Bottom line:</strong> While ChatGPT and Gemini are great for general knowledge, this RAG system 
+        is designed for <strong>enterprise document analysis</strong> where accuracy, traceability, and data privacy are critical.
+      </p>
     </section>
     
     <!-- Technology Stack -->
@@ -298,7 +348,7 @@ GET  /debug/chroma    - ChromaDB status
       <p>
         The complete source code, documentation, and setup instructions are available on GitHub.
       </p>
-      <a href="https://github.com/TonyTan12" target="_blank" class="github-link">
+      <a href="https://github.com/TonyTan12/rag-ai-assistant" target="_blank" class="github-link">
         <i class="fab fa-github"></i> View on GitHub →
       </a>
     </section>

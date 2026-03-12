@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breast Cancer Prediction Model | Tony Tan</title>
+  <meta name="description" content="Breast Cancer Prediction Model - Machine learning classification using decision trees by Tony Tan">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T041DTFRMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T041DTFRMN');
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tony Tan</a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#experience">Professional Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#projects">Projects</a>
+    <span>/</span>
+    <span class="current">Breast Cancer Prediction Model</span>
+  </div>
+  
+  <!-- Project Detail Header -->
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">Breast Cancer Prediction Model</h1>
+    <p class="project-detail-subtitle">
+      Machine learning classification model using decision trees to predict breast cancer diagnosis 
+      based on medical features with high accuracy and interpretability.
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href="https://github.com/TonyTan12/breast-cancer-prediction" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </header>
+  
+  <!-- Project Detail Content -->
+  <main class="project-detail-content">
+    <!-- Overview -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-info-circle"></i> Overview</h2>
+      <p>
+        This project implements a decision tree classification model to predict whether a breast mass 
+        is malignant or benign based on diagnostic measurements. Using the Wisconsin Breast Cancer dataset, 
+        the model analyzes features such as cell radius, texture, perimeter, area, smoothness, compactness, 
+        concavity, and symmetry to make accurate predictions.
+      </p>
+      <p>
+        The project demonstrates end-to-end machine learning workflow including data exploration, 
+        preprocessing, model training, hyperparameter tuning, and performance evaluation. The decision 
+        tree approach was chosen for its interpretability—allowing medical professionals to understand 
+        exactly which features drive each prediction.
+      </p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;"><i class="fas fa-star"></i> Key Features</h3>
+      <ul>
+        <li><strong>Decision Tree Classification:</strong> Interpretable model that shows exactly how predictions are made</li>
+        <li><strong>Feature Importance Analysis:</strong> Identifies which diagnostic measurements matter most</li>
+        <li><strong>Cross-Validation:</strong> 10-fold cross-validation for robust performance estimates</li>
+        <li><strong>Hyperparameter Tuning:</strong> Grid search to optimize tree depth and splitting criteria</li>
+        <li><strong>Performance Metrics:</strong> Accuracy, precision, recall, F1-score, and confusion matrix</li>
+        <li><strong>Visualization:</strong> Decision tree visualization and feature importance plots</li>
+      </ul>
+    </section>
+    
+    <!-- Technology Stack -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+      <div class="tech-stack-grid">
+        <div class="tech-category">
+          <h4><i class="fas fa-code"></i> Language</h4>
+          <span class="tech-tag">Python 3.10+</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-brain"></i> Machine Learning</h4>
+          <span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">Decision Trees</span>
+          <span class="tech-tag">GridSearchCV</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-database"></i> Data Processing</h4>
+          <span class="tech-tag">pandas</span>
+          <span class="tech-tag">NumPy</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-chart-bar"></i> Visualization</h4>
+          <span class="tech-tag">matplotlib</span>
+          <span class="tech-tag">seaborn</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-vial"></i> Evaluation</h4>
+          <span class="tech-tag">Classification Report</span>
+          <span class="tech-tag">Confusion Matrix</span>
+          <span class="tech-tag">ROC-AUC</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dataset -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-database"></i> Dataset</h2>
+      <p>
+        The Wisconsin Breast Cancer Dataset contains 569 samples with 30 numeric features computed from 
+        digitized images of fine needle aspirates (FNA) of breast mass. Features describe characteristics 
+        of cell nuclei present in the images.
+      </p>
+      <h4 style="margin-top: 1rem;">Feature Categories:</h4>
+      <ul>
+        <li><strong>Radius:</strong> Mean of distances from center to points on the perimeter</li>
+        <li><strong>Texture:</strong> Standard deviation of gray-scale values</li>
+        <li><strong>Perimeter:</strong> Total distance around the nucleus</li>
+        <li><strong>Area:</strong> Total area of the nucleus</li>
+        <li><strong>Smoothness:</strong> Local variation in radius lengths</li>
+        <li><strong>Compactness:</strong> (Perimeter² / Area) - 1.0</li>
+        <li><strong>Concavity:</strong> Severity of concave portions of the contour</li>
+        <li><strong>Symmetry:</strong> Measure of nuclear symmetry</li>
+        <li><strong>Fractal Dimension:</strong> "Coastline approximation" - 1</li>
+      </ul>
+    </section>
+    
+    <!-- Model Performance -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-tachometer-alt"></i> Model Performance</h2>
+      <table class="performance-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Accuracy</td>
+            <td>94-96%</td>
+          </tr>
+          <tr>
+            <td>Precision (Malignant)</td>
+            <td>95%</td>
+          </tr>
+          <tr>
+            <td>Recall (Malignant)</td>
+            <td>93%</td>
+          </tr>
+          <tr>
+            <td>F1-Score</td>
+            <td>94%</td>
+          </tr>
+          <tr>
+            <td>ROC-AUC</td>
+            <td>0.97</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 1rem;">
+        The model achieves high performance with minimal false negatives (missing malignant cases), 
+        which is critical in medical diagnosis applications.
+      </p>
+    </section>
+    
+    <!-- Implementation Highlights -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-code"></i> Implementation Highlights</h2>
+      
+      <h4>Data Preprocessing</h4>
+      <ul>
+        <li>Standardized features using StandardScaler for consistent scale</li>
+        <li>Handled missing values through imputation</li>
+        <li>Split data into 80% training, 20% testing sets</li>
+        <li>Applied stratified sampling to maintain class balance</li>
+      </ul>
+      
+      <h4 style="margin-top: 1rem;">Model Training</h4>
+      <ul>
+        <li>Grid search over hyperparameters: max_depth, min_samples_split, criterion</li>
+        <li>10-fold cross-validation for robust model selection</li>
+        <li>Pruned tree to prevent overfitting while maintaining accuracy</li>
+      </ul>
+      
+      <h4 style="margin-top: 1rem;">Interpretability</h4>
+      <ul>
+        <li>Visualized decision tree structure showing split points</li>
+        <li>Ranked features by importance (Gini importance)</li>
+        <li>Created decision path tracing for individual predictions</li>
+      </ul>
+    </section>
+    
+    <!-- GitHub Link -->
+    <section class="project-detail-section">
+      <h2><i class="fab fa-github"></i> Source Code</h2>
+      <p>
+        The complete source code, including the Jupyter notebook with full analysis and visualizations, 
+        is available on GitHub.
+      </p>
+      <a href="https://github.com/TonyTan12/breast-cancer-prediction" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub →
+      </a>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TonyTan12" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

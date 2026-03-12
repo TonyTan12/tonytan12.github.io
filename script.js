@@ -35,15 +35,17 @@ function initThemeToggle() {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   
-  if (!themeToggle) return;
-  
-  // Check for saved theme preference
+  // Apply saved theme immediately (before any other code runs)
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
+    if (themeIcon) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
   }
+  
+  if (!themeToggle) return;
   
   themeToggle.addEventListener('click', function() {
     const currentTheme = document.documentElement.getAttribute('data-theme');

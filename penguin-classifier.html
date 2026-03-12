@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penguin Species Classifier | Tony Tan</title>
+  <meta name="description" content="Penguin Species Classifier - Machine learning classification model by Tony Tan">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T041DTFRMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T041DTFRMN');
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tony Tan</a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#experience">Professional Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="investment-thesis.html">Investment Thesis</a></li>
+        <li><a href="index.html#analyzer"><span class="ai-nav-icon">AI</span> Job Fit</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#projects">Projects</a>
+    <span>/</span>
+    <span class="current">Penguin Species Classifier</span>
+  </div>
+  
+  <!-- Project Detail Header -->
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">Penguin Species Classifier</h1>
+    <p class="project-detail-subtitle">
+      Classification model that identifies penguin species based on physical measurements using 
+      machine learning algorithms for accurate species prediction.
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href="https://github.com/TonyTan12/penguin-classification" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </header>
+  
+  <!-- Project Detail Content -->
+  <main class="project-detail-content">
+    <!-- Overview -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-info-circle"></i> Overview</h2>
+      <p>
+        This project builds a multi-class classification model to identify penguin species based on 
+        physical measurements. Using the Palmer Penguins dataset, the model analyzes bill length, 
+        bill depth, flipper length, and body mass to distinguish between three penguin species: 
+        Adelie, Chinstrap, and Gentoo.
+      </p>
+      <p>
+        The project explores multiple classification algorithms including Logistic Regression, 
+        Random Forest, and Support Vector Machines (SVM) to find the best performing model. 
+        It includes comprehensive exploratory data analysis, feature engineering, and model comparison 
+        to achieve high classification accuracy.
+      </p>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;"><i class="fas fa-star"></i> Key Features</h3>
+      <ul>
+        <li><strong>Multi-Class Classification:</strong> Distinguishes between 3 penguin species</li>
+        <li><strong>Multiple Algorithms:</strong> Compares Logistic Regression, Random Forest, and SVM</li>
+        <li><strong>Exploratory Data Analysis:</strong> Visualizes relationships between features and species</li>
+        <li><strong>Feature Engineering:</strong> Creates derived features for improved accuracy</li>
+        <li><strong>Model Comparison:</strong> Systematic evaluation of algorithm performance</li>
+        <li><strong>Interactive Predictions:</strong> Input measurements to predict species</li>
+      </ul>
+    </section>
+    
+    <!-- Technology Stack -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+      <div class="tech-stack-grid">
+        <div class="tech-category">
+          <h4><i class="fas fa-code"></i> Language</h4>
+          <span class="tech-tag">Python 3.10+</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-brain"></i> Machine Learning</h4>
+          <span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">Logistic Regression</span>
+          <span class="tech-tag">Random Forest</span>
+          <span class="tech-tag">SVM</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-database"></i> Data Processing</h4>
+          <span class="tech-tag">pandas</span>
+          <span class="tech-tag">NumPy</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-chart-bar"></i> Visualization</h4>
+          <span class="tech-tag">matplotlib</span>
+          <span class="tech-tag">seaborn</span>
+          <span class="tech-tag">pair plots</span>
+        </div>
+        <div class="tech-category">
+          <h4><i class="fas fa-vial"></i> Evaluation</h4>
+          <span class="tech-tag">Cross-validation</span>
+          <span class="tech-tag">Confusion Matrix</span>
+          <span class="tech-tag">Classification Report</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dataset -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-database"></i> Dataset</h2>
+      <p>
+        The Palmer Penguins dataset contains 344 observations of three penguin species collected 
+        from islands in the Palmer Archipelago, Antarctica. The dataset is an excellent alternative 
+        to the classic Iris dataset for teaching classification.
+      </p>
+      
+      <h4 style="margin-top: 1rem;">Species:</h4>
+      <ul>
+        <li><strong>Adelie:</strong> 152 samples - Small penguins with short bills</li>
+        <li><strong>Chinstrap:</strong> 68 samples - Medium penguins with distinctive chin strap</li>
+        <li><strong>Gentoo:</strong> 124 samples - Largest penguins with long bills</li>
+      </ul>
+      
+      <h4 style="margin-top: 1rem;">Features Used:</h4>
+      <ul>
+        <li><strong>Bill Length (mm):</strong> Length of the penguin's bill</li>
+        <li><strong>Bill Depth (mm):</strong> Depth/thickness of the bill</li>
+        <li><strong>Flipper Length (mm):</strong> Length of the flipper</li>
+        <li><strong>Body Mass (g):</strong> Weight of the penguin</li>
+      </ul>
+    </section>
+    
+    <!-- Model Performance -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-tachometer-alt"></i> Model Performance</h2>
+      <table class="performance-table">
+        <thead>
+          <tr>
+            <th>Algorithm</th>
+            <th>Accuracy</th>
+            <th>Precision</th>
+            <th>Recall</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Random Forest</td>
+            <td>98%</td>
+            <td>98%</td>
+            <td>98%</td>
+          </tr>
+          <tr>
+            <td>SVM</td>
+            <td>97%</td>
+            <td>97%</td>
+            <td>97%</td>
+          </tr>
+          <tr>
+            <td>Logistic Regression</td>
+            <td>95%</td>
+            <td>95%</td>
+            <td>95%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 1rem;">
+        Random Forest achieved the best performance with 98% accuracy, likely due to its ability 
+        to capture non-linear relationships between features.
+      </p>
+    </section>
+    
+    <!-- Exploratory Data Analysis -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-search"></i> Exploratory Data Analysis</h2>
+      <p>
+        Comprehensive visualization revealed clear separability between species based on physical measurements:
+      </p>
+      <ul>
+        <li><strong>Bill Length vs Depth:</strong> Gentoo penguins have distinctly longer, shallower bills</li>
+        <li><strong>Flipper Length:</strong> Gentoo penguins have significantly longer flippers</li>
+        <li><strong>Body Mass:</strong> Gentoo penguins are substantially heavier</li>
+        <li><strong>Adelie vs Chinstrap:</strong> Similar body size but different bill characteristics</li>
+      </ul>
+      <p style="margin-top: 1rem;">
+        Pair plots and correlation analysis showed that flipper length and body mass are the strongest 
+        predictors for distinguishing Gentoo from other species.
+      </p>
+    </section>
+    
+    <!-- Implementation Highlights -->
+    <section class="project-detail-section">
+      <h2><i class="fas fa-code"></i> Implementation Highlights</h2>
+      
+      <h4>Data Preprocessing</h4>
+      <ul>
+        <li>Removed missing values (11 observations with incomplete measurements)</li>
+        <li>Encoded categorical variables (species, island, sex)</li>
+        <li>Standardized features for algorithms sensitive to scale (SVM, Logistic Regression)</li>
+        <li>Stratified train-test split to maintain class proportions</li>
+      </ul>
+      
+      <h4 style="margin-top: 1rem;">Model Training</h4>
+      <ul>
+        <li>5-fold cross-validation for robust performance estimation</li>
+        <li>Hyperparameter tuning using GridSearchCV</li>
+        <li>Feature importance analysis for Random Forest</li>
+        <li>Decision boundary visualization for 2D feature combinations</li>
+      </ul>
+      
+      <h4 style="margin-top: 1rem;">Model Selection</h4>
+      <ul>
+        <li>Compared algorithms on accuracy, precision, recall, and F1-score</li>
+        <li>Analyzed confusion matrices to identify misclassification patterns</li>
+        <li>Selected Random Forest as final model due to best overall performance</li>
+      </ul>
+    </section>
+    
+    <!-- GitHub Link -->
+    <section class="project-detail-section">
+      <h2><i class="fab fa-github"></i> Source Code</h2>
+      <p>
+        The complete source code, including the Jupyter notebook with full analysis, visualizations, 
+        and interactive prediction function, is available on GitHub.
+      </p>
+      <a href="https://github.com/TonyTan12/penguin-classification" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub →
+      </a>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="mailto:Tonytan1999aol@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonytan3/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TonyTan12" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2026 Tony Tan</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
