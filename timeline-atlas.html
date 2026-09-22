@@ -22,7 +22,7 @@
     gtag('js', new Date());
     gtag('config', 'G-T041DTFRMN');
   </script>
-</head>
+<style>.atlas-preview{margin:24px 0}.atlas-preview img{display:block;width:100%;height:auto;border:1px solid var(--border-color);border-radius:12px}.atlas-preview figcaption{font-size:.85rem;color:var(--text-secondary);margin-top:10px;line-height:1.6}.project-detail-section{min-width:0;max-width:100%}.architecture-diagram{max-width:100%;overflow-x:auto}.architecture-diagram pre{margin:0} .project-detail-section h3{margin:28px 0 12px;font-size:1.15rem}</style></head>
 <body>
 <!-- Loading Screen -->
 <div class="loading-screen" id="loading-screen">
@@ -63,7 +63,60 @@
 <!-- Project Detail Header -->
 <header class="project-detail-header"><h1 class="project-detail-title">Timeline Atlas</h1><p class="project-detail-subtitle">Interactive maps and analytics for Google Timeline data.</p></header>
 <!-- Project Detail Content -->
-<main class="project-detail-content"><section class="project-detail-section"><h2>Purpose</h2><p>I built Timeline Atlas to explore location history through maps and time-based analytics. The local dataset contains 5,488 visits across 1,845 places. This page describes the implementation and aggregate counts.</p></section><section class="project-detail-section"><h2>Map and analysis</h2><p>The JavaScript interface uses Leaflet to display places and travel paths. Date and place-type filters narrow the view. Rankings show visit frequency, recent visits, and estimated dwell time. Filtered results export to CSV.</p></section><section class="project-detail-section"><h2>Route rendering</h2><p>Route data loads when the travel-path layer is enabled. Canvas rendering displays map points and routes. Date and viewport checks limit the paths drawn. Local storage retains place aliases.</p></section><section class="project-detail-section"><h2>Timeline Galaxy</h2><p>A second Canvas view displays places by direction, distance, and visit frequency or dwell time. A month slider and playback controls show changes over time.</p></section><section class="project-detail-section"><h2>Stack</h2><p>JavaScript, HTML/CSS, Leaflet, Canvas, JSON, browser local storage, and CSV export. The source and location dataset are kept locally.</p></section></main>
+<main class="project-detail-content">
+<section class="project-detail-section">
+<h2>Two views of location history</h2>
+<p>I built Timeline Atlas to turn a Google Timeline export into an interactive view of places, visits, and travel. The project includes a Leaflet map dashboard and a separate Canvas visualization called Timeline Galaxy.</p>
+<p>The local dataset covers 5,488 visits across 1,845 places. The map answers where I went and how often. Galaxy shows how distance, direction, visit frequency, and time relate.</p>
+<div class="tech-stack-grid"><div class="tech-category"><h4>Data scale</h4><span class="tech-tag">5,488 visits</span><span class="tech-tag">1,845 places</span><span class="tech-tag">8,587 routes</span><span class="tech-tag">67,247 path points</span></div><div class="tech-category"><h4>Implementation</h4><span class="tech-tag">JavaScript</span><span class="tech-tag">Leaflet</span><span class="tech-tag">Canvas</span><span class="tech-tag">JSON</span><span class="tech-tag">HTML/CSS</span></div></div>
+</section>
+<section class="project-detail-section">
+<h2>Map dashboard</h2>
+<p>The first HTML view combines a map with date filters, place rankings, and visit statistics. Colored markers distinguish home, work, searched addresses, and other places. The interface supports point and density views, street and minimal basemaps, and optional travel paths.</p>
+<figure class="atlas-preview"><a href="assets/timeline-atlas-map.jpg" rel="noopener noreferrer" target="_blank"><img alt="Timeline Atlas map dashboard showing date filters, place markers, rankings, and CSV export with sample data" height="1024" loading="lazy" src="assets/timeline-atlas-map.jpg" width="1440"/></a><figcaption>Screenshot of timeline_map.html with illustrative records and locations. Select the image to view full size.</figcaption></figure>
+<h3>Filtering and ranking</h3>
+<p>Year shortcuts and date inputs select a time window. Search matches place aliases, types, and IDs. A minimum-visit slider narrows the results. Rankings switch between visit count, estimated dwell time, and most recent visit.</p>
+<p>Map markers and the ranked list respond to the same filters. Selecting a place opens its details. The home/work toggle controls whether those points appear in the view.</p>
+<h3>Exports and place labels</h3>
+<p>CSV export includes each filtered place's rank, name, type, visit count, estimated dwell hours, first and last visit, coordinates, and place ID. Custom aliases persist in browser local storage. Reverse geocoding uses a request queue to resolve address labels.</p>
+</section>
+<section class="project-detail-section">
+<h2>Timeline Galaxy</h2>
+<p>The second HTML view arranges places around a central reference point. Angle reflects geographic direction. A logarithmic radius represents distance, making nearby and distant places visible together. Point size switches between visit count and estimated dwell time.</p>
+<figure class="atlas-preview"><a href="assets/timeline-atlas-galaxy.jpg" rel="noopener noreferrer" target="_blank"><img alt="Timeline Galaxy Canvas view with distance rings, place rankings, monthly playback, and activity statistics using sample data" loading="lazy" src="assets/timeline-atlas-galaxy.jpg"/></a><figcaption>Screenshot of timeline_galaxy.html with illustrative records and locations. The interface matches the local project.</figcaption></figure>
+<h3>Time and interaction</h3>
+<p>A month slider, year filters, and playback controls reveal changes over time. Monthly bars show visit activity. Hovering over a point reveals its label and visit count. Selecting a point or ranked place opens a detail panel.</p>
+<p>The side panel summarizes visits, places, distance, and dwell time. An activity breakdown groups travel modes such as walking, driving, subway trips, and cycling.</p>
+</section>
+<section class="project-detail-section">
+<h2>Data model and files</h2>
+<p>Both views use place records and visit arrays. Each visit references a place index and stores start time, end time, and dwell hours. This links repeated visits to a shared place record. Galaxy adds activity records, distance, and bearing for its radial layout.</p>
+<div class="architecture-diagram"><pre>Google Timeline export
+        |
+        v
+Places + visits + summary data
+        |
+        +-- timeline_map.html
+        |      Leaflet map, filters, rankings, CSV export
+        |      |
+        |      +-- timeline_routes.js (loaded on demand)
+        |
+        +-- timeline_galaxy.html
+               Canvas view, monthly playback, activity breakdown</pre></div>
+<p>The local route file contains travel-path data used by the map. Route rendering is separate from the initial place view, so opening the dashboard does not require drawing every path.</p>
+</section>
+<section class="project-detail-section">
+<h2>Rendering and responsiveness</h2>
+<p>Leaflet Canvas renderers draw points and routes. The map checks the selected dates and viewport before drawing travel paths. Filter changes and map events use short delays to avoid repeated redraws during rapid input.</p>
+<p>Galaxy uses Canvas drawing and pointer hit testing. Animation-frame scheduling limits hover redraws. Its layout adjusts to the available screen size, and the monthly controls update the visualization and summary panels together.</p>
+<p>The map includes a fallback basemap and tile timeouts. Address requests run through a queue with pauses between requests. These choices help the interface handle external map and geocoding services.</p>
+</section>
+<section class="project-detail-section">
+<h2>Public preview and local data</h2>
+<p>The screenshots show the real interfaces loaded with synthetic sample records. Their totals differ from the local dataset counts above. The original location export, route coordinates, and personal place labels stay local.</p>
+<p>This case study highlights the data model, interaction design, and rendering work. The public page does not expose the personal dataset or offer a download of the original HTML files.</p>
+</section>
+</main>
 <!-- Footer -->
 <footer class="footer">
 <div class="footer-content">
